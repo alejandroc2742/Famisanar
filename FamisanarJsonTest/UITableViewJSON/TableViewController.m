@@ -20,14 +20,8 @@
 
 @implementation TableViewController
 
-//- (id)initWithStyle:(UITableViewStyle)style
-//{
-//    self = [super initWithStyle:style];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
+NSString *SERVICE_URI = @"https://www.reddit.com/reddits.json";
+NSString *SERVICE_URL = @"http://api.tvmaze.com/shows/1/episodes";
 
 - (void)viewDidLoad {
     
@@ -50,7 +44,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.items.count;
+    //return self.items.count;
+    return 25;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -87,7 +82,7 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    [manager GET:@"http://api.tvmaze.com/shows/1/episodes" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+    [manager GET: SERVICE_URL parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         
         NSArray *jsonArray = (NSArray *)responseObject;
         NSMutableArray *tempItems = [[NSMutableArray alloc] init];

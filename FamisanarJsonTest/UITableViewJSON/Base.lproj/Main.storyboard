@@ -64,16 +64,19 @@
                                 <rect key="frame" x="69" y="241" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rC1-He-5NZ">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rC1-He-5NZ">
                                 <rect key="frame" x="77" y="244" width="221" height="30"/>
                                 <connections>
                                     <segue destination="uSX-h2-Pf2" kind="show" id="wXR-xD-kaX"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xp-zf-QUH">
-                                <rect key="frame" x="0.0" y="64" width="375" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xp-zf-QUH">
+                                <rect key="frame" x="0.0" y="114" width="375" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="G7z-6I-bMk"/>
+                                    <constraint firstAttribute="height" constant="128" id="aNK-EF-iWI"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -82,11 +85,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rC1-He-5NZ" firstAttribute="leading" secondItem="Gop-cE-fFS" secondAttribute="leading" constant="77" id="BcZ-y2-cNp"/>
+                            <constraint firstItem="9Xp-zf-QUH" firstAttribute="top" secondItem="Gop-cE-fFS" secondAttribute="top" constant="50" id="EhS-Ym-aU1"/>
+                            <constraint firstItem="9Xp-zf-QUH" firstAttribute="leading" secondItem="Gop-cE-fFS" secondAttribute="leading" id="GoD-zi-6Aw"/>
                             <constraint firstItem="Gop-cE-fFS" firstAttribute="trailing" secondItem="rC1-He-5NZ" secondAttribute="trailing" constant="77" id="I72-en-uRP"/>
+                            <constraint firstItem="9Xp-zf-QUH" firstAttribute="trailing" secondItem="Gop-cE-fFS" secondAttribute="trailing" id="WOh-v6-ii9"/>
+                            <constraint firstItem="9Xp-zf-QUH" firstAttribute="top" secondItem="Gop-cE-fFS" secondAttribute="top" constant="50" id="bed-6Z-phj"/>
                             <constraint firstItem="rC1-He-5NZ" firstAttribute="top" secondItem="Gop-cE-fFS" secondAttribute="top" constant="180" id="gxE-tE-wbQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gop-cE-fFS"/>
                     </view>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="button" destination="rC1-He-5NZ" id="dy1-Cs-xbi"/>
                         <outlet property="desc" destination="9Xp-zf-QUH" id="sw4-Ad-DaA"/>
@@ -107,7 +115,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYL-Pu-x7I">
                                 <rect key="frame" x="0.0" y="189" width="375" height="290"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

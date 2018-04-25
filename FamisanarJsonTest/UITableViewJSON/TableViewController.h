@@ -10,4 +10,6 @@
 
 @interface TableViewController : UITableViewController
 
+extern const NSString *SERVICE_URL;
+extern const NSString *SERVICE_URI;
 @end
